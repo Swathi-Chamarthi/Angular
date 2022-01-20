@@ -1,0 +1,15 @@
+<p>This is the parent component</p>
+<button (click)="toggleChild()">Toggle Child</button><br><br>
+<input type="text" [(ngModel)]="uname">
+{{uname}}
+
+<div>
+<h3 #header>Techno Elevate</h3>
+<p #header>Angular Class</p>
+</div>
+
+<app-child *ngIf="flag" [uname]="uname">
+    <h4>content projection</h4>
+</app-child>
+
+

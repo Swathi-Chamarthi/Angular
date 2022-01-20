@@ -1,0 +1,41 @@
+<!-- console.log("=======Data Binding========") -->
+<h3>Angular class</h3>
+
+<!-- console.log("=======One way Data Binding========") -->
+<!-- console.log("=======Interpolation Binding========") -->
+<h3>{{2+3}}</h3>
+
+<!-- console.log("=======Property Binding========") -->
+<input type="text" [value]="val">
+
+<!-- console.log("=======Style Binding========") -->
+<h2 [style.color]="isSpecial?c1:c2">Data Binding</h2>
+
+<!-- console.log("=======Class Binding========") -->
+<p [class]="isSpecial?'para1':'para2'">class binding</p>
+
+<!-- console.log("=======Attribute Binding========") -->
+<!-- //It will work mainly to the colspn function -->
+<table border="solid 2px">    
+    <tr>
+        <th [attr.colspan]= "colval">Person</th>
+    </tr>
+    <tr>
+        <td>virat</td>
+        <td>kohli</td>
+    </tr>
+    <tr>
+        <td>rohith</td>
+        <td>sharma</td> 
+    </tr>
+</table>
+<br>
+
+<!-- console.log("=======Event Binding========") -->
+<button (click)="display()">Click Me</button>
+<br>
+<!-- console.log("=======Two way Data Binding========") -->
+<input type="text" [(ngModel)]="displayResult">
+<h3>{{displayResult}}</h3>
+
+<app-login [valueChild]="val"></app-login>
