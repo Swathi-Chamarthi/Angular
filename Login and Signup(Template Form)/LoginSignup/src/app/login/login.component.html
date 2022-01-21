@@ -18,7 +18,7 @@
 
 
 
-<div class="container">
+<!-- <div class="container">
 <div class="col-md-6">
   <form #regForm="ngForm" (ngSubmit)="onSubmit(regForm)">
     <div class="form-group">
@@ -35,4 +35,21 @@
     <button type="submit" class="btn btn-primary">Login</button>
   </form>
 </div>
+</div> -->
+
+
+<div class="container">
+<form #regForm="ngForm" (ngSubmit)="onSubmit(regForm)">
+    <div class="form-group">
+        <label for="exampleInputEmail1">EmailId</label>
+            <input #uemail="ngModel" required minlength="0" maxlength="30" type="text" name="uemail" class="form-control" aria-describedby="emailhelp" ngModel>
+            <span style="color: red;" *ngIf="uemail.invalid && uemail.touched">Enter a valid Email</span>                                
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+            <input #upass="ngModel" required minlength="6" maxlength="20" pattern="^[A-Za-z0-9-_@]+$" type="password" name="upass" class="form-control" aria-describedby="passwordhelp" ngModel>
+            <span style="color: red;" *ngIf="upass.invalid && upass.touched">Enter a valid Last Name</span>                                            
+        </div>
+    <button type="submit" class="btn btn-primary" >Signup</button>
+</form>
 </div>
