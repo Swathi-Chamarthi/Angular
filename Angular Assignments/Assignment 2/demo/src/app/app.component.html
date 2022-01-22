@@ -1,0 +1,16 @@
+
+<div>
+  <label for="City">City: </label><br>
+    <select name="City" [(ngModel)]="city" (click)="select()">
+
+      <option value="No" selected>---select city---</option>
+      <option value="Karnataka">Karnataka</option>
+      <option value="Andhra Pradesh">Andhra Pradesh</option>
+      <option value="Kerala">Kerala</option>
+      <option value="Telangana">Telangana</option>
+      <option value="Delhi">Delhi</option>
+    </select>
+</div>
+ <div>
+   <h2>{{city+" city has been selected"}}</h2>
+ </div>

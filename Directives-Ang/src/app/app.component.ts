@@ -15,7 +15,7 @@ export class AppComponent {
 
   ]
 
-  selectedCountry="uk"
+  selectedCountry="ind"
   
   flag:boolean=true
 
